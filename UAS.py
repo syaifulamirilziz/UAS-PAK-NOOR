@@ -14,24 +14,34 @@ batas_bawah = 1   #
 batas_atas  = 100 #
 kesempatan  = 15  #
 
+skor = 100
+
 angka = random.randint(batas_bawah, batas_atas)
 
 
-print("Saya sudah memilih angka antara 1 sampai 100")
+print("\nSaya sudah memilih angka antara 1 sampai 100")
 
 for i in range(kesempatan):
     print(f"\nKesempatan ke-{i+1}")
+    print(f"skor saat ini: {skor}")
+
+
     tebakan = int(input("Masukkan tebakan kamu: "))
 
     if tebakan > angka:
         print("Angkaku lebih ke bawah")
+        skor -= 5
     elif tebakan < angka:
         print("Angkaku lebih ke atas")
+        skor -= 5
     else:
         print(f"🎉 Selamat {nama}, tebakan kamu BENAR!")
+        skor += 20
         break
 else:
     print("❌ Kesempatan habis!")
     print(f"Angka yang benar adalah: {angka}")
 
 print("\n=== GAME SELESAI ===")
+print(f"Nama : {nama}")
+print(f"skor akhir : {skor}")
