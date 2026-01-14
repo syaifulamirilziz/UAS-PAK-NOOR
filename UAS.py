@@ -118,3 +118,20 @@ else:
 print("\n=== GAME SELESAI ===")
 print(f"Nama : {nama}")
 print(f"Skor akhir : {skor}")
+
+# ================= LEADERBOARD =================
+
+leaderboard = []
+
+# menyimpan data pemain
+leaderboard.append({
+    "nama": nama,
+    "skor": skor
+})
+
+# mengurutkan leaderboard berdasarkan skor (tertinggi ke terendah)
+leaderboard = sorted(leaderboard, key=lambda x: x["skor"], reverse=True)
+
+print("\n=== LEADERBOARD ===")
+for i, data in enumerate(leaderboard, start=1):
+    print(f"{i}. {data['nama']} - {data['skor']} poin")
