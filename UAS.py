@@ -41,7 +41,80 @@ for i in range(kesempatan):
 else:
     print("❌ Kesempatan habis!")
     print(f"Angka yang benar adalah: {angka}")
+    print("\n=== GAME SELESAI ===")
+    print(f"Nama : {nama}")
+    print(f"skor akhir : {skor}")
+    exit()
+
+# ================= LEVEL 2 =================
+print("\n--- LEVEL 2 --- : MENENGAH ---")
+print("Peraturan")
+print("1. Tebak angka dari 1 sampai 1000")
+print("2. Kesempatan 8 kali")
+print("Kisi-kisi: Angkaku di atas 400 dan di bawah 700")
+
+batas_bawah = 1
+batas_atas  = 1000
+kesempatan  = 15
+
+angka = random.randint(batas_bawah, batas_atas)
+
+for i in range(kesempatan):
+    print(f"\nKesempatan ke-{i+1}")
+    print(f"Skor saat ini: {skor}")
+
+    tebakan = int(input("Masukkan tebakan kamu: "))
+
+    if tebakan > angka:
+        print("Angkaku lebih ke bawah")
+        skor -= 5
+    elif tebakan < angka:
+        print("Angkaku lebih ke atas")
+        skor -= 5
+    else:
+        print("🎉 Tebakan kamu BENAR!")
+        skor += 30
+        break
+ else:
+    print("❌ Kesempatan habis!")
+    print(f"Angka yang benar adalah: {angka}")
+    print("\n=== GAME SELESAI ===")
+    print(f"Skor akhir: {skor}")
+    exit()
+
+# ================= LEVEL 3 =================
+print("\n--- LEVEL 3 --- : SULIT ---")
+print("Peraturan")
+print("1. Tebak angka dari 1 sampai 10000")
+print("2. Kesempatan 3 kali")
+print("Kisi-kisi: Angkaku di antara 2500 dan 3000")
+
+batas_bawah = 1
+batas_atas  = 10000
+kesempatan  = 15
+
+angka = random.randint(batas_bawah, batas_atas)
+
+for i in range(kesempatan):
+    print(f"\nKesempatan ke-{i+1}")
+    print(f"Skor saat ini: {skor}")
+
+    tebakan = int(input("Masukkan tebakan kamu: "))
+
+    if tebakan > angka:
+        print("Angkaku lebih ke bawah")
+        skor -= 10
+    elif tebakan < angka:
+        print("Angkaku lebih ke atas")
+        skor -= 10
+    else:
+        print("🔥 Tebakan kamu BENAR! Kamu menamatkan game!")
+        skor += 50
+        break
+else:
+    print("❌ Kesempatan habis!")
+    print(f"Angka yang benar adalah: {angka}")
 
 print("\n=== GAME SELESAI ===")
 print(f"Nama : {nama}")
-print(f"skor akhir : {skor}")
+print(f"Skor akhir : {skor}")
