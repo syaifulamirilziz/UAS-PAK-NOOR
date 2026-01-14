@@ -14,7 +14,7 @@ batas_bawah = 1   #
 batas_atas  = 100 #
 kesempatan  = 15  #
 
-skor = 100
+skor = 2000
 
 angka = random.randint(batas_bawah, batas_atas)
 
@@ -50,8 +50,8 @@ else:
 print("\n--- LEVEL 2 --- : MENENGAH ---")
 print("Peraturan")
 print("1. Tebak angka dari 1 sampai 1000")
-print("2. Kesempatan 8 kali")
-print("Kisi-kisi: Angkaku di atas 400 dan di bawah 700")
+print("2. Kesempatan 15 kali")
+
 
 batas_bawah = 1
 batas_atas  = 1000
@@ -75,7 +75,8 @@ for i in range(kesempatan):
         print("🎉 Tebakan kamu BENAR!")
         skor += 30
         break
- else:
+else:
+
     print("❌ Kesempatan habis!")
     print(f"Angka yang benar adalah: {angka}")
     print("\n=== GAME SELESAI ===")
@@ -85,12 +86,12 @@ for i in range(kesempatan):
 # ================= LEVEL 3 =================
 print("\n--- LEVEL 3 --- : SULIT ---")
 print("Peraturan")
-print("1. Tebak angka dari 1 sampai 10000")
-print("2. Kesempatan 3 kali")
-print("Kisi-kisi: Angkaku di antara 2500 dan 3000")
+print("1. Tebak angka dari 1 sampai 2500")
+print("2. Kesempatan 15 kali")
+
 
 batas_bawah = 1
-batas_atas  = 10000
+batas_atas  = 2500
 kesempatan  = 15
 
 angka = random.randint(batas_bawah, batas_atas)
